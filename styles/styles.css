@@ -783,3 +783,21 @@ nav a:hover {
     color: var(--blue);
     cursor: pointer;
 }
+
+button.btn {
+    height: fit-content;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: max-content;
+   
+}
+
+ul.dropdown {
+    border-top: var(--border);
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+    align-items: flex-start;
+}
