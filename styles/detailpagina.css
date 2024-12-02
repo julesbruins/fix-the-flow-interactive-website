@@ -196,9 +196,12 @@ section.tabellen {
     /* FORMS STYLING */
     .styling-form {
         font-family: "archivo";
+        border: var(--border);
+        padding: var(--size-xs);
         
         label {
             display:grid;
+            padding-top: var(--size-sm);
         }
         label span {
             padding:.5em;
@@ -585,4 +588,21 @@ body:has(header .active) {
 .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn:hover {
+    border: 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+    color: var(--blue);
+    img {
+        content: url("../assets/plus-blauw.png");
+    }
+    span {
+        border-right: 1px solid var(--blue);
+    }
+}
+
+nav a:hover {
+    color: var(--blue);
+    cursor: pointer;
 }

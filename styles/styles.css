@@ -767,7 +767,7 @@ body:has(header .active) {
 }
 
 
-button.btn:hover {
+.btn:hover {
     border: 1px solid var(--blue);
     border-right: 1px solid var(--blue);
     color: var(--blue);
@@ -777,4 +777,9 @@ button.btn:hover {
     span {
         border-right: 1px solid var(--blue);
     }
+}
+
+nav a:hover {
+    color: var(--blue);
+    cursor: pointer;
 }
