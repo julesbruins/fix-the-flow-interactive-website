@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "archivo";
+    src: url("/assets/Archivo-VariableFont_wdth,wght.ttf");
+}
+@font-face {
+    font-family: "martianmono";
+    src: url("/assets/MartianMono-VariableFont_wdth,wght.ttf");
+}
+
+body {
+    display:grid;
+    gap:1.5em;
+}
+
+.styling-form {
+    font-family: "archivo";
+    
+    label {
+        display:grid;
+    }
+
+    label span {
+        padding:.5em;
+        color: grey;
+        pointer-events:none;
+        grid-area: 1/1;
+        transition: .2s;                            /* snelheid naar boven verplaatsen */
+        z-index: 1;                                 /* zorgt dat de tekst geen waas krijgt omdat het achter background color staat */
+    }
+ 
+    label:has([required]) span::after {             /* voegt verplicht teken toe als 'required' veld is */
+        content:"*";
+    }
+    
+
+    label:has(:focus) span,
+    label:not( :has(:placeholder-shown) ) span {
+        translate: 0 -1.2em;                        /* naar boven maar ook verplaatsen tekst */
+        color: blue;
+    }
+
+
+    input {
+        grid-area: 1/1;
+        font:inherit;                               /* font evengroot als invulvaktekst */
+        border: 0px;                                /* geen lijn om invulvak */
+        border-bottom: 1px solid black;
+        background-color: #fff8;
+        width: 260px;
+
+        padding: .5em;  
+        outline:none;                               /* geen lijn om invulvak wanneer geselcteerd */
+
+        /* &:focus {
+            border-style:dashed;
+            border-color:red;
+        } */
+        
+    }
+
+   
+}
+  

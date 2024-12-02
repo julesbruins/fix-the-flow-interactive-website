@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "archivo";
+    src: url("../fonts/Archivo-VariableFont.woff2") format('woff2');
+}
+@font-face {
+    font-family: "martianmono";
+    src: url("../fonts/MartianMono-VariableFont.ttf") format('truetype');
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke: 1px transparent;
+    -moz-osx-font-smoothing: grayscale;
+}
