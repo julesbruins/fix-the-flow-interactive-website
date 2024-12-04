@@ -141,6 +141,10 @@ time::after {
   font-weight: 700;
 }
 
+/* @view-transition {
+  navigation: auto;
+} */
+
 /* Formulier elementen */
 
 /* Extra */
