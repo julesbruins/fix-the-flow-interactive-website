@@ -803,6 +803,7 @@ nav a:hover {
     padding: 1rem;
     align-items: flex-start;
     border: 1px solid black;
+    color: var(--black);
 
     position: absolute;
     top: 2.7rem;
@@ -810,6 +811,10 @@ nav a:hover {
     width: calc(100% + 2px);
     background-color: var(--white);
     z-index: 1;
+
+    li:hover {
+        color: var(--blue);
+    }
 }
 
 .collapsed {
