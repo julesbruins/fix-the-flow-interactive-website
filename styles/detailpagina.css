@@ -108,6 +108,10 @@ section.top {
         color: var(--black);
         line-height: var(--size-sm);
     }
+    a:hover {
+            color: var(--blue);
+            cursor: pointer;
+    }
 
     h1 {
         margin-top: var(--size-sm);

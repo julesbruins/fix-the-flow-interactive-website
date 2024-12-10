@@ -16,8 +16,12 @@ const themaDropdown = document.querySelector(".thema-dropdown");
 
 // Aan themaFilter voeg je een event listener toe, dus als er wat gebeurt in dit gevallen klikken, dan ...
 // dan wordt aan thema-dropdown de class 'collapsed' getoggled. Dus aan en uit gezet.
-themaFilter.addEventListener("click", () => {
-  themaDropdown.classList.toggle("collapsed");
+themaFilter.addEventListener("click", (e) => {
+  themaDropdown.addEventListener('click',function(e) {
+    e.stopPropagation();
+  });
+    themaDropdown.classList.toggle("collapsed");
+
 });
 
 
@@ -28,7 +32,13 @@ const locatieDropdown = document.querySelector(".locatie-dropdown");
 // Aan locatieFilter voeg je een event listener toe, dus als er wat gebeurt in dit gevallen klikken, dan ...
 // dan wordt aan locatie-dropdown de class 'collapsed' getoggled. Dus aan en uit gezet.
 locatieFilter.addEventListener("click", () => {
+  locatieDropdown.addEventListener('click',function(e) {
+    e.stopPropagation();
+  });
   locatieDropdown.classList.toggle("collapsed");
 });
+
+// Omdat de dropdown in de filter button zit klapt die in als je een cheeckbox aanvinkt. 
+// ^ nu zeg je als die de dropdown aanklikt hoef die niet in te klappen.
 
 // querySelector herkend alleen de eerste dus vandaar dat we dezelfde twee keer uitschrijven.

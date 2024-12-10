@@ -180,6 +180,10 @@ section.home {
         color: var(--black);
         line-height: var(--size-sm);
     }
+    a:hover {
+        color: var(--blue);
+        cursor: pointer;
+        }
 
     h1 {
         margin-top: var(--size-sm);
@@ -819,4 +823,15 @@ nav a:hover {
 
 .collapsed {
     display: none;
+}
+
+input[type="checkbox"]:checked {
+    /* -webkit-appearance: none;
+  appearance: none; */
+    accent-color: var(--blue);
+   
+}
+
+@view-transition {
+    navigation: auto;
 }
