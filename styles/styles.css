@@ -145,13 +145,24 @@ h4,
         width: 1rem;
     }
 }
+.btn:hover {
+    border: 1px solid var(--blue);
+    border-right: 1px solid var(--blue);
+    color: var(--blue);
+    img {
+        content: url("../assets/plus-blauw.png");
+    }
+    span {
+        border-right: 1px solid var(--blue);
+    }
+}
 
 
 li {
     list-style-type: none;
 }
 
-
+/* MARK: HEADER */
 header {
     top: 0;
     position: sticky;
@@ -170,6 +181,7 @@ header {
     }
 }
 
+/* MARK: HOME */
 section.home {
     padding: 4rem 1rem 4rem 1rem;
     background-color: rgba(0, 0, 0, 0);
@@ -210,6 +222,7 @@ section.home {
     }
 }
 
+/* MARK: TRENDING */
 section.trending {
     article {
         padding: 1.5rem;
@@ -309,6 +322,7 @@ section.trending {
 
 }
 
+/* MARK: SEARCH */
 section.search {
     display: flex;
     flex-direction: column;
@@ -331,6 +345,7 @@ section.search {
     }
 }
 
+/* MARK: EVENTLIST */
 section.eventlist {
     ul {
         padding: var(--size-lg) 1.5rem;
@@ -371,6 +386,7 @@ section.eventlist {
     }
 }
 
+/* MARK: LADEN */
 .laden {
     padding: 4.875rem 1.5rem;
 
@@ -388,6 +404,7 @@ section.eventlist {
     }
 }
 
+/* MARK: VERLEDEN */
 section.verleden {
     border-top: var(--border);
     padding: 4.5rem 1.5rem 1rem;
@@ -441,6 +458,7 @@ section.verleden {
     }
 }
 
+/* MARK:UP2DATE */
 section.up2date {
     border-top: var(--border);
     padding: 3rem 1.75rem;
@@ -459,6 +477,7 @@ section.up2date {
     }
 }
 
+/* MARK: THANKS */
 section.thanks {
     border-top: var(--border);
     padding: 3rem 1.75rem;
@@ -478,6 +497,7 @@ section.thanks {
 
 }
 
+/* MARK: LOGOS */
 div.logos {
     border-top: var(--border);
     display: flex;
@@ -491,7 +511,7 @@ div.logos {
 
 }
 
-/* FOOTER */
+/* MARK: FOOTER */
 .first {
     border-top: var(--border);
     padding: 4rem 1.5rem;
@@ -574,6 +594,7 @@ footer {
     }
 }
 
+/* MARK: BOTTOM */
 section.bottom {
     border-top: var(--border);
     padding: 2.5rem 1.5rem;
@@ -604,7 +625,7 @@ section.bottom {
 
 
 
-/* HAMBURGER MENU */
+/* MARK: HAMBURGER MENU */
 .off-screen-menu {
     background-color: var(--white);
     height: 100vh;
@@ -772,17 +793,8 @@ body:has(header .active) {
 }
 
 
-.btn:hover {
-    border: 1px solid var(--blue);
-    border-right: 1px solid var(--blue);
-    color: var(--blue);
-    img {
-        content: url("../assets/plus-blauw.png");
-    }
-    span {
-        border-right: 1px solid var(--blue);
-    }
-}
+
+
 
 nav a:hover {
     color: var(--blue);
