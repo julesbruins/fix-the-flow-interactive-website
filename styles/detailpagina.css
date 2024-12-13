@@ -611,3 +611,8 @@ nav a:hover {
     cursor: pointer;
 }
 
+
+
+fieldset:has(:user-invalid) {
+    background: #faa;
+}
