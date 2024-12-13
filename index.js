@@ -42,3 +42,18 @@ locatieFilter.addEventListener("click", () => {
 // ^ nu zeg je als die de dropdown aanklikt hoef die niet in te klappen.
 
 // querySelector herkend alleen de eerste dus vandaar dat we dezelfde twee keer uitschrijven.
+
+
+
+// const ux = document.getElementById("ux")
+
+// ux.addEventListener('click', function(func){
+//   if (ux.checked = true) {
+//     console.log("right")
+//   } else if  () {
+//     console.log(" not right")
+//   }
+// })
+
+
+// func();
