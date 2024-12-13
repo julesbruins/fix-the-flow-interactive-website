@@ -329,6 +329,7 @@ section.search {
     gap: 1.5rem;
     padding: var(--size-lg) 1.5rem;
     border-top: var(--border);
+    border-bottom: var(--border);
 
     @media (width > 30rem) {
         flex-direction: row;
@@ -347,9 +348,9 @@ section.search {
 
 /* MARK: EVENTLIST */
 section.eventlist {
+    padding: var(--size-lg);
+    
     ul {
-        padding: var(--size-lg) 1.5rem;
-        border-top: var(--border);
 
         @media (width > 30rem) {
             .flex-container {
@@ -359,7 +360,7 @@ section.eventlist {
         }
 
         @media (width > 48rem) {
-            padding: var(--size-lg);
+            /* padding: 0 var(--size-lg); */
         }
     }
 
@@ -702,6 +703,10 @@ nav {
     display: flex;
     border-bottom: var(--border);
     background-color: var(--white);
+
+    a.active-page {
+        color: var(--blue);
+    }
 
     @media (width > 30rem) {
         font-size: 1.25rem;
