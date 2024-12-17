@@ -195,10 +195,11 @@ section.home {
     a:hover {
         color: var(--blue);
         cursor: pointer;
+
+        img {
+            content: url("../assets/arrow-left-blue.png");
         }
-    img:hover {
-        content: url("../assets/");
-    }
+}
 
     h1 {
         margin-top: var(--size-sm);
@@ -413,6 +414,9 @@ section.verleden {
     border-top: var(--border);
     padding: 4.5rem 1.5rem 1rem;
 
+    ul {
+        filter: opacity(0.5);
+    }
 
     li {
         border-top: var(--border);
@@ -530,6 +534,12 @@ div.logos {
     a.blauwe-link {
         margin-top: 2.5rem;
     }
+    a:hover {
+        color: var(--black);
+        img {
+            content: url(../assets/arrow-right.svg);
+        }
+    }
 }
 
 .second {
@@ -554,10 +564,13 @@ div.logos {
 
 .third {
     padding: 4rem 1.5rem;
-
     a {
         hyphens: auto;
     }
+    a:hover {
+        color: var(--black);
+    }
+
     .margin {
         margin-top: var(--size-md);
         display: flex;
@@ -609,6 +622,10 @@ section.bottom {
         text-decoration: underline;
         color: var(--black);
     }
+    a:hover {
+        color: var(--blue);
+    }
+
 
     .socials {
         display: flex;
@@ -809,16 +826,11 @@ nav a:hover {
     cursor: pointer;
 }
 
+
 .btn.filter {
     display: grid;
     grid-template-columns: 1fr max-content;
-    /* grid-template-columns: max-content max-content;
     cursor: pointer;
-    position: relative; */
-    div {
-
-    }
-   
 }
 
 .dropdown {
@@ -865,41 +877,46 @@ nav a:hover {
     gap: .5rem;
 }
 
-input[type="checkbox"]:checked {    
+input[type="radio"]:checked {    
     accent-color: var(--blue);
-   
 }
 
 
-
-/* @view-transition {
-    navigation: auto;
-} */
-
-
+/* button zwart bij actieve filter */
 .btn-selected:has(:checked) > :is(span, div) {
     color: var(--white);
     background-color: var(--black);
-    
-
 }
-
 .btn-selected:has(:checked) span {
     border-color: var(--white);
 }
-
 .btn-selected:has(:checked) img {
     filter: brightness(0) invert(1);
 }
 
+/* de alle filters optie moet niet zwart worden */
+.btn-selected:has(:checked#all) span {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--black);
+}
+.btn-selected:has(:checked#all) div {
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--black);
+}
+.btn-selected:has(:checked#all) img {
+    filter: none;
+}
 
-.eventlist ul[data-filter="ams"] li:not( [data-category2="ams"] ),
-.eventlist ul[data-filter="eind"] li:not( [data-category2="eind"] ) {
+
+.eventlist ul[data-filter="amsterdam"] li:not( [data-category2="amsterdam"] ),
+.eventlist ul[data-filter="eindhoven"] li:not( [data-category2="eindhoven"] ) {
     display:none;
 }
 
 .eventlist ul[data-filter="ux"] li:not( [data-category="ux"] ),
 .eventlist ul[data-filter="hr"] li:not( [data-category="hr"] ),
-.eventlist ul[data-filter="hack"] li:not( [data-category="hackathon"] ) {
+.eventlist ul[data-filter="hackathon"] li:not( [data-category="hackathon"] ) {
     display:none;
 }
