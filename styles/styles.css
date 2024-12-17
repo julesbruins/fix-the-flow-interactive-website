@@ -134,7 +134,7 @@ h4,
         border-right: var(--border);
     }
     > div {
-        height: 2.5rem;
+        height: 100%;
         width: 2.5rem;
         display: flex;
         justify-content: center;
@@ -196,6 +196,9 @@ section.home {
         color: var(--blue);
         cursor: pointer;
         }
+    img:hover {
+        content: url("../assets/");
+    }
 
     h1 {
         margin-top: var(--size-sm);
@@ -808,13 +811,13 @@ nav a:hover {
 
 .btn.filter {
     display: grid;
-
-    div {
-        margin-left: -1px;
-    }
+    grid-template-columns: 1fr max-content;
     /* grid-template-columns: max-content max-content;
     cursor: pointer;
     position: relative; */
+    div {
+
+    }
    
 }
 
@@ -872,3 +875,31 @@ input[type="checkbox"]:checked {
 /* @view-transition {
     navigation: auto;
 } */
+
+
+.btn-selected:has(:checked) > :is(span, div) {
+    color: var(--white);
+    background-color: var(--black);
+    
+
+}
+
+.btn-selected:has(:checked) span {
+    border-color: var(--white);
+}
+
+.btn-selected:has(:checked) img {
+    filter: brightness(0) invert(1);
+}
+
+
+.eventlist ul[data-filter="ams"] li:not( [data-category2="ams"] ),
+.eventlist ul[data-filter="eind"] li:not( [data-category2="eind"] ) {
+    display:none;
+}
+
+.eventlist ul[data-filter="ux"] li:not( [data-category="ux"] ),
+.eventlist ul[data-filter="hr"] li:not( [data-category="hr"] ),
+.eventlist ul[data-filter="hack"] li:not( [data-category="hackathon"] ) {
+    display:none;
+}
