@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     position: relative;
 
@@ -26,6 +27,7 @@ p.label {
         text-decoration: none;
     }
 }
+
 p.data {
     font-family: "martianmono";
     font-size: var(--size-sm);
@@ -39,8 +41,17 @@ a {
     font-size: var(--size-sm);
 
 }
+
 a.blauwe-link {
     color: var(--blue);
+}
+
+a.blauwe-link:hover {
+    color: var(--black);
+
+    img {
+        content: url(../assets/arrow-right.svg);
+    }
 }
 
 .visually-hidden {
@@ -54,16 +65,17 @@ a.blauwe-link {
     align-items: center;
     background-color: var(--white);
     font-family: var(--secondary-font);
-    width: fit-content;                 /* zorgt dat border niet plakt in uitklap nav */
+    width: fit-content;
+    /* zorgt dat border niet plakt in uitklap nav */
     color: var(--black);
     font-size: 1rem;
 
-    
+
     span {
         padding: .75rem;
         border-right: var(--border);
     }
-    
+
     div {
         height: 2.5rem;
         width: 2.5rem;
@@ -71,11 +83,13 @@ a.blauwe-link {
         justify-content: center;
         align-items: center;
     }
+
     img {
         height: 1rem;
         width: 1rem;
     }
 }
+
 li {
     list-style-type: none;
 }
@@ -108,9 +122,14 @@ section.top {
         color: var(--black);
         line-height: var(--size-sm);
     }
+
     a:hover {
-            color: var(--blue);
-            cursor: pointer;
+        color: var(--blue);
+        cursor: pointer;
+
+        img {
+            content: url("../assets/arrow-left-blue.png");
+        }
     }
 
     h1 {
@@ -163,6 +182,7 @@ section.info {
         p.groot {
             padding-top: 0;
         }
+
         p.klein {
             grid-column: 2;
         }
@@ -171,7 +191,7 @@ section.info {
 
 section.tabellen {
     padding: var(--size-lg) var(--size-sm) 0;
-    
+
     h3 {
         padding-bottom: var(--size-md);
         text-transform: uppercase;
@@ -185,14 +205,18 @@ section.tabellen {
         margin-bottom: var(--size-lg);
         /* border-collapse: collapse;       zorgt voor geen ruimte tussen de tr */
     }
+
     td {
         padding-top: var(--size-sm);
         padding-bottom: var(--size-sm);
         border-collapse: collapse;
     }
-    tr + tr td {                        /*  elke opeenvolgende tr behalve eerst want die volgt niet op */
-       border-top: var(--border);
+
+    tr+tr td {
+        /*  elke opeenvolgende tr behalve eerst want die volgt niet op */
+        border-top: var(--border);
     }
+
     tr:last-child {
         margin-bottom: var(--size-sm);
     }
@@ -202,47 +226,60 @@ section.tabellen {
         font-family: "archivo";
         border: var(--border);
         padding: var(--size-xs);
-        
+
         label {
-            display:grid;
+            display: grid;
             padding-top: var(--size-sm);
         }
+
         label span {
-            padding:.5em;
+            padding: .5em;
             color: var(--grey);
-            pointer-events:none;
+            pointer-events: none;
             grid-area: 1/1;
-            transition: .2s;                            /* snelheid naar boven verplaatsen */
-            z-index: 1;                                 /* zorgt dat de tekst geen waas krijgt omdat het achter background color staat */
+            transition: .2s;
+            /* snelheid naar boven verplaatsen */
+            z-index: 1;
+            /* zorgt dat de tekst geen waas krijgt omdat het achter background color staat */
         }
-        label:has([required]) span::after {             /* voegt verplicht teken toe als 'required' veld is */
-            content:"*";
+
+        label:has([required]) span::after {
+            /* voegt verplicht teken toe als 'required' veld is */
+            content: "*";
         }
+
         label:has(:focus) span,
         label:not(:has(:placeholder-shown)) span {
-            translate: 0 -1.2em;                        /* naar boven maar ook verplaatsen tekst  */
-            color:var(--blue);
+            translate: 0 -1.2em;
+            /* naar boven maar ook verplaatsen tekst  */
+            color: var(--blue);
         }
+
         input {
             grid-area: 1/1;
-            font:inherit;                               /* font evengroot als invulvaktekst */
-            border: 0px;                                /* geen lijn om invulvak */
+            font: inherit;
+            /* font evengroot als invulvaktekst */
+            border: 0px;
+            /* geen lijn om invulvak */
             border-bottom: 1px solid black;
             background-color: #fff8;
             width: 100%;
-    
-            padding-bottom: .2em;  
-            outline:none;                               /* geen lijn om invulvak wanneer geselcteerd */
+
+            padding-bottom: .2em;
+            outline: none;
+            /* geen lijn om invulvak wanneer geselcteerd */
             margin: 1rem 0 1rem;
         }
-    .table2 {
-        padding-top: var(--size-md);
+
+        .table2 {
+            padding-top: var(--size-md);
+        }
+
+        a {
+            margin-top: var(--size-lg);
+        }
     }
 
-    a {
-        margin-top: var(--size-lg);
-    }
-}
     a {
         margin-top: var(--size-lg);
         margin-bottom: var(--size-xl);
@@ -267,13 +304,15 @@ section.tabellen {
             grid-template-columns: 1fr 1fr;
             gap: var(--size-sm);
         }
+
         .left-container {
             grid-column: 1;
         }
+
         .right-container {
             grid-column: 2;
         }
-        
+
 
     }
 }
@@ -297,6 +336,7 @@ section.locatie {
         border: var(--border);
         margin-bottom: var(--size-sm);
     }
+
     h4.xl {
         padding-top: var(--size-md);
         padding-bottom: var(--size-md);
@@ -312,6 +352,7 @@ section.locatie {
             margin-bottom: 0;
             border: none;
         }
+
         .flex-container {
             padding: var(--size-lg);
         }
@@ -330,6 +371,7 @@ section.locatie {
         height: 5rem;
         margin-right: auto;
     }
+
     a.blauwe-link {
         margin-top: 2.5rem;
     }
@@ -361,6 +403,11 @@ section.locatie {
     a {
         hyphens: auto;
     }
+
+    a:hover {
+        color: var(--black);
+    }
+
     .margin {
         margin-top: var(--size-md);
         display: flex;
@@ -410,6 +457,10 @@ section.bottom {
         color: var(--black);
     }
 
+    a:hover {
+        color: var(--blue);
+    }
+
     .socials {
         display: flex;
         gap: var(--size-sm);
@@ -443,22 +494,26 @@ section.bottom {
     padding-left: 1.5rem;
     transition: .3s ease;
     opacity: 100%;
-    
+
     li {
         margin-top: 2.5rem;
     }
+
     .align-right {
         border-top: var(--border);
         width: 25rem;
         padding-top: 3rem
     }
+
     a {
         font-size: var(--size-sm);
         color: var(--black);
     }
+
     a.blauwe-link {
         color: var(--blue);
     }
+
     img {
         height: var(--size-sm);
     }
@@ -475,15 +530,19 @@ section.bottom {
             align-items: center;
             margin-top: var(--size-xs);
         }
+
         li {
             margin-top: 0;
         }
+
         .align-right {
-            margin-left: auto;      /* zorgt voor ruimte in nav */
+            margin-left: auto;
+            /* zorgt voor ruimte in nav */
             border-top: none;
             padding-top: 0;
             width: fit-content;
         }
+
         a {
             color: var(--black);
         }
@@ -520,6 +579,10 @@ nav {
 
         a.blauwe-link {
             color: var(--blue);
+        }
+
+        a.blauwe-link:hover {
+            color: var(--black);
         }
     }
 }
@@ -598,9 +661,11 @@ body:has(header .active) {
     border: 1px solid var(--blue);
     border-right: 1px solid var(--blue);
     color: var(--blue);
+
     img {
-        content: url("../assets/plus-blauw.png");
+        content: url("../assets/right-blauw.svg");
     }
+
     span {
         border-right: 1px solid var(--blue);
     }
