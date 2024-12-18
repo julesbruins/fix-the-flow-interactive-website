@@ -55,7 +55,7 @@
 
         <!-- 3 events op een rij -->
         <section class="trending">
-            <h2 class="visually-hidden">trending events</h2>
+            <h2 class="visually-hidden">aankomende events:</h2>
             <article>
                 <img class="sizing" src="assets/dutch-digital-day.png" alt="dutch digital day">
                 <div class="text">
@@ -89,12 +89,20 @@
 
         <!-- search- en filterbalk -->
         <section class="search">
-            <h2 class="visually-hidden">zoekbalk</h2>
-            <form action="./search">
-                <label for="event">zoek een event...</label>
-                <input type="search" id="event" name="search">
-                <button type="submit">zoek</button>
+            <h2 class="visually-hidden">zoekbalk en filters</h2>
+
+            <form class="search-form" action="./search">
+                <!-- <label for="event"> -->
+
+             <div class="searchbox">       
+                <img src="./assets/search-icon.png" alt="" aria-label="true">
+                <input type="search" id="event" name="search" placeholder="zoek een event..." aria-label="Zoek een event" inputmode="search">
+                <!-- <button type="submit">zoek</button> -->
+            </div>
+
+            <!-- </label> -->
             </form>
+
             <div class="right-container">
                 <button class="btn filter thema-btn btn-selected"><span>THEMA</span>
                     <div><img src="assets/Icon.png" alt=""></div>
